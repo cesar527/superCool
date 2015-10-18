@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var lacasitoLogo: UIImageView!
+    @IBOutlet weak var background: UIImageView!
+    @IBOutlet weak var uncoolButton: UIButton!
+    @IBOutlet weak var androidLogo: UIImageView!
+    @IBOutlet weak var appleLogo: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func makeMeNotSoUncool(sender: AnyObject) {
+        lacasitoLogo.hidden = false
+        background.hidden = false
+        uncoolButton.hidden = true
+        
+    }
 
+    @IBAction func hideAndroid(sender: AnyObject) {
+        androidLogo.hidden = true
+    }
+    
+    @IBAction func hideApple(sender: AnyObject) {
+        appleLogo.hidden = true
+    }
 }
 
